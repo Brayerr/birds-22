@@ -25,7 +25,7 @@ public class Bird : MonoBehaviour
 
         IEnumerator DestroyBird()
         {
-            yield return new WaitForSeconds(1.3f);
+            yield return new WaitForSeconds(1.7f);
             Destroy(gameObject);
             gameManager.birdDestroy = true;
         }

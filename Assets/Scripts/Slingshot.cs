@@ -25,7 +25,7 @@ public class Slingshot : MonoBehaviour
 
     private void Start()
     {
-        count = 3;
+        count = 4;
         lineRenderer[0].positionCount = 2;
         lineRenderer[1].positionCount = 2;
         lineRenderer[0].SetPosition(0, stripPosition[0].position);
@@ -65,7 +65,8 @@ public class Slingshot : MonoBehaviour
           bird.isKinematic = true;
         gameManager.birdDestroy = false;
           ResetStrips();
-          
+        count--;
+
     }
 
     void ResetStrips()
@@ -95,7 +96,6 @@ public class Slingshot : MonoBehaviour
         bird = null;
         birdCollider = null;       
         Invoke("CreateBirds", 2);
-        count--;     
     }
 
     private void OnMouseDown()
